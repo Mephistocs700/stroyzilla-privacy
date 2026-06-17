@@ -87,11 +87,41 @@
     .brand {
       color: var(--accent);
     }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .nav a.active {
+      border-color: rgba(255, 122, 0, 0.35);
+      background: rgba(255, 122, 0, 0.10);
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
   <main>
     <article>
+      <nav class="nav" aria-label="Документы StroyZilla">
+        <a class="active" href="./">Политика конфиденциальности</a>
+        <a href="./account-deletion.html">Удаление аккаунта</a>
+      </nav>
       <h1>Политика конфиденциальности <span class="brand">StroyZilla</span></h1>
       <p class="date">Дата вступления в силу: 17 июня 2026 г.</p>
       <p class="lead">Настоящая Политика конфиденциальности описывает, какие данные обрабатывает приложение StroyZilla, как они используются, где хранятся и какие права есть у пользователя.</p>
